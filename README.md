@@ -28,3 +28,4 @@ update build.gradle line 26
 install nodejs on the node and update the time 
 update java 
 install docker pipeline in jenkins
+update the docker path in jenkins
