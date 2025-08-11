@@ -24,3 +24,4 @@ build trigger abdbfbd
 UPgrade gradle from 4.4 to 8.3
 update gradle path in jenkins pipeline
 updated build.gradle 
+update build.gradle line 26
