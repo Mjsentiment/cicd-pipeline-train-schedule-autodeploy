@@ -19,3 +19,4 @@ testing
  more changes
 working on gettinga build trigger to jenkins
 update jenkins pipeline
+build trigger
