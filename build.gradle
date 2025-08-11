@@ -1,13 +1,17 @@
 plugins {
-    // Use the modern Node plugin compatible with Gradle 8+
     id 'com.github.node-gradle.node' version '5.0.0'
 }
 
 node {
     download = true
-    version = '18.16.0'    // Use a recent Node.js version
-    npmVersion = '9.5.1'   // Compatible npm version
+    version = '20.5.0'      // updated to Node.js 20.5.0
+    npmVersion = '9.7.2'    // compatible npm version for Node 20
     // Optionally set workDir and nodeModulesDir if needed
+}
+
+// Custom clean task to delete both build and dist folders
+task clean(type: Delete) {
+    delete 'dist', 'build'
 }
 
 // Declare a build task
@@ -36,13 +40,7 @@ task npm_test(type: com.github.gradle.node.npm.task.NpmTask) {
     args = ['run', 'test']
 }
 
-task npm_build(type: com.github.gradle.node.npm.task.NpmTask) {
-    dependsOn npmInstall
-    args = ['run', 'build']
-}
-
-// Declare task dependencies
+// Define task dependencies
 build.dependsOn zip
-zip.dependsOn npm_build
-npm_build.dependsOn npm_test
+zip.dependsOn npm_test
 npm_test.dependsOn npmInstall
