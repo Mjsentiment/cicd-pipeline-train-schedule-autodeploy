@@ -21,3 +21,4 @@ working on gettinga build trigger to jenkins
 update jenkins pipeline
 build trigger
 build trigger abdbfbd
+UPgrade gradle from 4.4 to 8.3
