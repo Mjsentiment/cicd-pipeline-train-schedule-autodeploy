@@ -26,3 +26,4 @@ update gradle path in jenkins pipeline
 updated build.gradle 
 update build.gradle line 26
 install nodejs on the node and update the time 
+update java 
