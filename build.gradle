@@ -29,7 +29,7 @@ task zip(type: Zip) {
 }
 
 // Declare npm tasks
-task npmInstall(type: com.github.gradle.node.npm.task.NpmInstallTask)
+// task npmInstall(type: com.github.gradle.node.npm.task.NpmInstallTask)
 
 task npm_test(type: com.github.gradle.node.npm.task.NpmTask) {
     dependsOn npmInstall
